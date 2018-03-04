@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.alpha.ghosty.automobilemanager.InsuranceRecordView"
+    style="@style/layoutStyle">
+
+    <!--TextView
+        android:text="Insurance Details"
+        android:id="@+id/pageTitle"
+        style="@style/pageTitle"/-->
+
+    <TextView
+        style="@style/selectVehicle"
+        android:text="Vehicle (Tap Here)"
+        android:id="@+id/vehicleDetailTv"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Insurance Provider"
+        android:id="@+id/insuranceProviderTV"
+        android:layout_below="@id/vehicleDetailTv"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Type Of Insurance"
+        android:id="@+id/typeOfInsuranceTV"
+        android:layout_below="@id/insuranceProviderTV"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/odoMtrRdingTV"
+        android:text="Odo Meter Reading"
+        android:layout_below="@id/typeOfInsuranceTV"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/insuranceDateBeginTV"
+        android:text="Date Begin"
+        android:layout_below="@id/odoMtrRdingTV"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/insuranceDateEndTV"
+        android:text="Date End"
+        android:layout_below="@id/insuranceDateBeginTV"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/costTV"
+        android:text="Cost of Insurance"
+        android:layout_below="@id/insuranceDateEndTV"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/detailsTV"
+        android:text="Enter Insurance Details"
+        android:layout_below="@id/costTV" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Receipt(Yes/No)"
+        android:id="@+id/receiptTV"
+        android:layout_below="@+id/detailsTV"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/receiptView"
+        android:layout_below="@+id/receiptTV"
+        android:layout_above="@+id/addedOnTv" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AddedOn: (Double Tap To Delete)"
+        android:id="@+id/addedOnTv"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

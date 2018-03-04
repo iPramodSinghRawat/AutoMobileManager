@@ -1,0 +1,158 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.alpha.ghosty.automobilemanager.UserRegistration"
+    style="@style/layoutStyle">
+
+    <TextView
+        android:text="Enter Your Details"
+        android:id="@+id/pageTitle"
+        style="@style/pageTitle"/>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scroller"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:layout_below="@id/pageTitle">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="Select Profile Type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/usrProfileTypeTV"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/usrProfileTypeTV"
+                android:orientation="horizontal"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/usrProfileTypeRG">
+                <RadioButton
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rider"
+                    android:id="@+id/rider"
+                    android:checked="true" />
+                <RadioButton
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Driver"
+                    android:id="@+id/driver"
+                    android:checked="false" />
+                <RadioButton
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trucker"
+                    android:id="@+id/trucker"
+                    android:checked="false" />
+            </RadioGroup>
+
+            <EditText
+                style="@style/editText"
+                android:inputType="textPersonName"
+                android:hint="Enter Your Name"
+                android:id="@+id/usrNameET"
+                android:layout_below="@+id/usrProfileTypeRG"/>
+
+            <EditText
+                style="@style/editText"
+                android:inputType="textEmailAddress"
+                android:hint="Enter Your e-Mail id"
+                android:id="@+id/usrEmailIdET"
+                android:layout_below="@+id/usrNameET"/>
+
+            <EditText
+                style="@style/editText"
+                android:inputType="numberPassword"
+                android:hint="Enter Password"
+                android:id="@+id/usrPasswordET"
+                android:layout_below="@+id/usrEmailIdET"/>
+
+            <EditText
+                style="@style/editText"
+                android:inputType="phone"
+                android:hint="Enter Mobile Number"
+                android:id="@+id/usrMobileET"
+                android:layout_below="@+id/usrPasswordET"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:text="Select Currency(Tap Here)"
+                android:onClick="selectCurrency"
+                android:id="@+id/usrCurrencyTV"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@+id/usrMobileET"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                android:text="Select Measurement Unit (Tap Here)"
+                android:onClick="selectConsumptionUnit"
+                android:id="@+id/measurementUnitTV"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@+id/usrCurrencyTV"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Enable Password Protection"
+                android:id="@+id/ppCheckBox"
+                android:textStyle="bold"
+                android:background="#fff"
+                android:layout_below="@+id/measurementUnitTV"/>
+
+            <Button
+                style="@style/submitButton"
+                android:text="Submit"
+                android:id="@+id/submitUsrDetail"
+                android:onClick="submitUserDetail"
+                android:layout_below="@+id/ppCheckBox"/>
+
+            <!--Button
+                style="@style/submitButton"
+                android:text="Import Previous DataBase"
+                android:id="@+id/importDbBTN"
+                android:layout_below="@+id/submitUsrDetail"
+                android:onClick="importDb"/-->
+
+            <Button
+                style="@style/submitButton"
+                android:text="Upload BackUp"
+                android:id="@+id/importBTN"
+                android:onClick="uploadPreviousData"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Result: "
+                android:id="@+id/resultTv"
+                android:layout_alignParentBottom="true"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

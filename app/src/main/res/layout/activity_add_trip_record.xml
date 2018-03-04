@@ -1,0 +1,190 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.alpha.ghosty.automobilemanager.AddTripRecord"
+    style="@style/layoutStyle">
+
+    <!--TextView
+        android:text="Enter Trip Record"
+        android:id="@+id/pageTitle"
+        style="@style/pageTitle"/-->
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scroller"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                style="@style/selectVehicle"
+                android:text="Select Vehicle (Tap Here)"
+                android:id="@+id/selectVehicle"
+                android:onClick="selectVehicle"
+                android:clickable="true"
+                android:freezesText="true"/>
+
+            <TextView
+                style="@style/lastRecordTextView"
+                android:text="Last Trip Details"
+                android:freezesText="true"
+                android:id="@+id/lastTripTv"/>
+
+            <TextView
+                style="@style/selectFormType"
+                android:text="Tap Here To Select Type Of Trip"
+                android:id="@+id/typeOfTripTV"
+                android:onClick="selectTripType"
+                android:clickable="true"
+                android:freezesText="true"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/departureReturnLL"
+                android:layout_marginBottom="0dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/departureReturnLLS1"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:text="Enter Departure Details"
+                        android:textStyle="bold"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/DepartureDtlTv"
+                        android:layout_marginBottom="10dp"/>
+
+                    <EditText
+                        style="@style/editText"
+                        android:id="@+id/departureLocationET"
+                        android:inputType="textPersonName"
+                        android:hint="From Location"/>
+
+                    <EditText
+                        style="@style/editText"
+                        android:id="@+id/odoMeterDepartureET"
+                        android:inputType="number"
+                        android:hint="odoMeter Reading"/>
+
+                    <EditText
+                        style="@style/editText"
+                        android:id="@+id/dateOfDepartureET"
+                        android:inputType="date"
+                        android:onClick="getDate"
+                        android:hint="Date Of Departure"/>
+
+                    <EditText
+                        style="@style/editText"
+                        android:id="@+id/timeOfDepartureET"
+                        android:inputType="time"
+                        android:onClick="getTime"
+                        android:hint="Time Of Departure"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/departureReturnLLS2"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:text="Enter Return Details"
+                        android:textStyle="bold"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/returnDtlTv"
+                        android:layout_marginBottom="10dp"/>
+
+                    <EditText
+                        style="@style/editText"
+                        android:id="@+id/returnLocationET"
+                        android:inputType="textPersonName"
+                        android:hint="Location"/>
+
+                    <EditText
+                        style="@style/editText"
+                        android:id="@+id/odoMeterReturnET"
+                        android:inputType="number"
+                        android:hint="odoMeter Reading"/>
+
+                    <EditText
+                        style="@style/editText"
+                        android:id="@+id/dateOfReturnET"
+                        android:inputType="date"
+                        android:hint="Date Of Return"
+                        android:onClick="getDate"/>
+
+                    <EditText
+                        style="@style/editText"
+                        android:id="@+id/timeOfReturnET"
+                        android:inputType="time"
+                        android:onClick="getTime"
+                        android:hint="Time Of Return"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <EditText
+                style="@style/editText"
+                android:id="@+id/priceET"
+                android:inputType="numberDecimal"
+                android:hint="Cost of Trip"/>
+
+            <TextView
+                style="@style/receiptTextView"
+                android:text="Upload Receipt or Pic for Future Reference"
+                android:id="@+id/receiptOptTV"/>
+
+            <RadioGroup
+                style="@style/receiptRadioGroup"
+                android:id="@+id/receiptOptRG">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Take Photo"
+                    android:onClick="selectImage"
+                    android:id="@+id/takePhoto" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No Need"
+                    android:id="@+id/noNeed" />
+
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/receiptView"/>
+
+            <Button
+                style="@style/submitButton"
+                android:text="Submit"
+                android:id="@+id/submitTripRecordsBtn"
+                android:onClick="submitTripRecords"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffff"
+                android:text="Result"
+                android:id="@+id/resultTv"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

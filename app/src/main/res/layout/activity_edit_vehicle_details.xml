@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.alpha.ghosty.automobilemanager.EditVehicleDetails"
+    style="@style/layoutStyle">
+
+    <TextView
+        android:text="Update/Edit Vehicle Details"
+        android:id="@+id/pageTitle"
+        style="@style/pageTitle"/>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scroller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_below="@id/pageTitle">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pageSubLL">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vehicle Type"
+                android:id="@+id/vehicleTypeTv"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/vehicleBrandTv"
+                android:text="Brand"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/vehicleTypeTv"/>
+
+            <EditText
+                style="@style/editText"
+                android:id="@+id/modelET"
+                android:inputType="textPersonName"
+                android:hint="Enter Model "
+                android:layout_below="@id/vehicleBrandTv"/>
+
+            <EditText
+                style="@style/editText"
+                android:inputType="textPersonName"
+                android:hint="Enter Registration Plate Number"
+                android:id="@+id/regNumberET"
+                android:layout_below="@id/modelET"/>
+
+            <EditText
+                style="@style/editText"
+                android:hint="Year of Purchase"
+                android:inputType="date"
+                android:onClick="getDate"
+                android:id="@+id/yearPurchaseET"
+                android:layout_below="@id/regNumberET"/>
+
+            <EditText
+                style="@style/editText"
+                android:inputType="number"
+                android:hint="Fuel Tank Capacity"
+                android:id="@+id/tankCapacityET"
+                android:layout_below="@id/yearPurchaseET"/>
+
+            <EditText
+                style="@style/editText"
+                android:id="@+id/vColorET"
+                android:inputType="textPersonName"
+                android:hint="Enter Color"
+                android:layout_below="@id/tankCapacityET"/>
+
+            <EditText
+                style="@style/editText"
+                android:id="@+id/fuelTypeET"
+                android:inputType="textPersonName"
+                android:hint="Enter Fuel Type"
+                android:layout_below="@id/vColorET"/>
+
+            <EditText
+                style="@style/editText"
+                android:id="@+id/commentET"
+                android:hint="Enter Comment"
+                android:layout_below="@id/fuelTypeET"/>
+
+            <TextView
+                android:id="@+id/vehicleAddedOnET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Added On: "
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/commentET"/>
+
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to Vehicle List"
+        android:id="@+id/backBtn"
+        android:onClick="redirectToVehicleList"
+        android:layout_above="@+id/resultTv"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="@style/submitButton"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:id="@+id/updateVehicleBtn"
+        android:onClick="updateVehicleData"
+        android:layout_above="@+id/resultTv"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff"
+        android:text="Result"
+        android:id="@+id/resultTv"
+        android:layout_below="@id/submitVehicleDataBtn"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

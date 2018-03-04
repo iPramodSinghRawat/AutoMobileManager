@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.alpha.ghosty.automobilemanager.ServiceDataView"
+    style="@style/layoutStyle">
+
+    <!--TextView
+        android:text="Service Records"
+        android:id="@+id/pageTitle"
+        style="@style/pageTitle"/-->
+
+    <TextView
+        style="@style/selectVehicle"
+        android:text="Vehicle Detail: "
+        android:id="@+id/vehicleDetailTv"/>
+
+    <TextView
+        android:text="Type Of Service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/typeOfServiceTv"
+        android:layout_marginBottom="10dp"
+        android:textSize="20dp"
+        android:layout_below="@id/vehicleDetailTv"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/odoMtrRdingTv"
+        android:text="odoMtrRdingTv"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/typeOfServiceTv"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dateTv"
+        android:text="Date"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/odoMtrRdingTv"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/priceTv"
+        android:text="Cost of Service"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/dateTv"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Receipt"
+        android:id="@+id/receiptOptTv"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/priceTv" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/receiptView"
+        android:layout_below="@+id/receiptOptTv"
+        android:layout_above="@+id/addedOnTv" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AddedOn: "
+        android:id="@+id/addedOnTv"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

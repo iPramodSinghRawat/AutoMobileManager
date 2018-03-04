@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.alpha.ghosty.automobilemanager.AddOtherExpenses"
+    style="@style/layoutStyle">
+
+    <!--LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pageSubTitleLL"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"-->
+        <!--TextView
+            android:text="Enter Other Expenses Details"
+            android:id="@+id/pageTitle"
+            style="@style/pageTitle"/-->
+    <!--/LinearLayout-->
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scroller"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pageSubLL">
+
+            <TextView
+                style="@style/selectVehicle"
+                android:text="Select Vehicle (Tap Here)"
+                android:id="@+id/selectVehicle"
+                android:onClick="selectVehicle"
+                android:clickable="true"
+                android:freezesText="true"/>
+
+            <TextView
+                style="@style/lastRecordTextView"
+                android:text="Last Expense Details"
+                android:freezesText="true"
+                android:id="@+id/lastOExpenseTv"/>
+
+            <TextView
+                style="@style/selectFormType"
+                android:text="Select Type Of Expenses (Tap Here)"
+                android:id="@+id/typeOfExpenseTV"
+                android:onClick="selectExpenseType"
+                android:clickable="true"
+                android:freezesText="true"/>
+
+            <EditText
+                style="@style/editText"
+                android:id="@+id/odoMtrRdingET"
+                android:inputType="number"
+                android:hint="Odo Meter Reading"/>
+
+            <EditText
+                style="@style/editText"
+                android:id="@+id/dateET"
+                android:inputType="date"
+                android:hint="Date"
+                android:onClick="getDate"/>
+
+            <EditText
+                style="@style/editText"
+                android:id="@+id/priceET"
+                android:inputType="numberDecimal"
+                android:hint="Cost"/>
+
+            <TextView
+                style="@style/receiptTextView"
+                android:text="Upload Receipt or Dashboard Pic for Future Reference"
+                android:id="@+id/receiptOptTV"/>
+
+            <RadioGroup
+                style="@style/receiptRadioGroup"
+                android:id="@+id/receiptOptRG">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Take Photo"
+                    android:onClick="selectImage"
+                    android:id="@+id/takePhoto" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No Need"
+                    android:id="@+id/noNeed" />
+
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/receiptView"/>
+
+            <Button
+                style="@style/submitButton"
+                android:text="Submit"
+                android:id="@+id/submitFuelFillBtn"
+                android:onClick="submitExpenseData"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffff"
+                android:text="Result"
+                android:id="@+id/resultTv"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

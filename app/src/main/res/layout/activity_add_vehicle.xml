@@ -1,0 +1,127 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.alpha.ghosty.automobilemanager.AddVehicle"
+    style="@style/layoutStyle">
+    
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scroller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pageSubLL">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Vehicle type"
+                android:id="@+id/vTypeRgHdng"
+                android:layout_gravity="center_horizontal" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:id="@+id/vTypeRg">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bike"
+                    android:id="@+id/bike"
+                    android:checked="true" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Car"
+                    android:id="@+id/car"
+                    android:checked="false" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bus"
+                    android:id="@+id/bus"
+                    android:checked="false" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Truck"
+                    android:id="@+id/Truck"
+                    android:checked="false" />
+            </RadioGroup>
+
+            <TextView
+                style="@style/selectVehicle"
+                android:id="@+id/vSlectedTBrandTv"
+                android:text="Select Brand (Tap Here)"
+                android:clickable="true"
+                android:onClick="selectVBrand"/>
+
+            <EditText
+                style="@style/editText"
+                android:id="@+id/vModelET"
+                android:inputType="textPersonName"
+                android:hint="Enter Model "/>
+
+            <EditText
+                style="@style/editText"
+                android:inputType="textPersonName"
+                android:hint="Enter Registration Plate Number"
+                android:id="@+id/regNumberET"/>
+
+            <EditText
+                style="@style/editText"
+                android:hint="Year of Purchase"
+                android:inputType="date"
+                android:onClick="getDate"
+                android:id="@+id/yearPurchaseET"/>
+
+            <EditText
+                style="@style/editText"
+                android:inputType="number"
+                android:hint="Fuel Tank Capacity"
+                android:id="@+id/tankCapacityET"/>
+
+            <EditText
+                style="@style/editText"
+                android:id="@+id/vColorET"
+                android:inputType="textPersonName"
+                android:hint="Enter Color"/>
+
+            <EditText
+                style="@style/editText"
+                android:id="@+id/fuelTypeET"
+                android:inputType="textPersonName"
+                android:hint="Enter Fuel Type"/>
+
+            <EditText
+                style="@style/editText"
+                android:id="@+id/commentET"
+                android:hint="Enter Comment"/>
+
+            <Button
+                style="@style/submitButton"
+                android:text="Submit"
+                android:id="@+id/submitVehicleDataBtn"
+                android:onClick="submitVehicleData"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffff"
+                android:text="Result"
+                android:id="@+id/resultTv"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

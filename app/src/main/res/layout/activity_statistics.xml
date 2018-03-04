@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.alpha.ghosty.automobilemanager.Statistics"
+    style="@style/layoutStyle">
+
+    <!--TextView
+        android:text="Statistics"
+        android:id="@+id/pageTitle"
+        style="@style/pageTitle"/-->
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/scroller"/>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/scroller"/>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/scroller"/>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scroller"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/pageSubLL"
+            android:weightSum="1">
+
+            <TextView
+                style="@style/selectVehicle"
+                android:text="Chart Type"
+                android:id="@+id/chartTypeTV"
+                android:onClick="selectChart"
+                android:clickable="true"
+                android:freezesText="true"/>
+
+            <TextView
+                style="@style/selectVehicle"
+                android:text="Vehicles"
+                android:id="@+id/selectVehicle"
+                android:onClick="selectVehicle"
+                android:clickable="true"
+                android:freezesText="true"
+                android:layout_below="@id/chartTypeTV"/>
+
+            <TextView
+                style="@style/selectVehicle"
+                android:text="Statics Type"
+                android:id="@+id/staticsTypeTv"
+                android:onClick="selectStatType"
+                android:freezesText="true"
+                android:clickable="true"
+                android:layout_below="@id/selectVehicle"/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

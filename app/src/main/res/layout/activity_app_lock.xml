@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.alpha.ghosty.automobilemanager.AppLock"
+    style="@style/layoutStyle">
+
+    <!--TextView
+        android:text="Enter Password"
+        android:id="@+id/pageTitle"
+        style="@style/pageTitle"/-->
+
+    <EditText
+        style="@style/editText"
+        android:inputType="numberPassword"
+        android:hint="Enter Password"
+        android:gravity="center"
+        android:id="@+id/passwordEdtTxt"/>
+
+    <Button
+        style="@style/submitButton"
+        android:text="Submit"
+        android:id="@+id/sbmtBtn"
+        android:onClick="checkUserPassword"
+        android:layout_below="@+id/passwordEdtTxt" />
+
+    <Button
+        style="@style/submitButton"
+        android:text="Forget Password ?"
+        android:id="@+id/forgetPasswordBTN"
+        android:onClick="redirect2ForgetPassword"
+        android:layout_below="@+id/sbmtBtn" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textSize="20dp"
+        android:id="@+id/pCntTmr"
+        android:gravity="center"
+        android:layout_below="@+id/forgetPasswordBTN"/>
+
+</RelativeLayout>

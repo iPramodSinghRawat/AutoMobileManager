@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.alpha.ghosty.automobilemanager.VehicleDetails"
+    style="@style/layoutStyle">
+
+    <!--LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pageSubTitleLL"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"-->
+    <!--TextView
+        android:text="Vehicle Details"
+        android:id="@+id/pageTitle"
+        style="@style/pageTitle"/-->
+    <!--/LinearLayout-->
+
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scroller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pageSubLL">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vehicle Type"
+                android:id="@+id/vehicleTypeTv"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/vehicleBrandTv"
+                android:text="Brand"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/vehicleModelTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Model"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registration Plate Number"
+                android:ems="10"
+                android:id="@+id/vehicleRegNumberTv"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Year of Purchase"
+                android:ems="10"
+                android:onClick="getDate"
+                android:id="@+id/vehicleDateOfPurchaseTv"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fuel Tank Capacity"
+                android:ems="10"
+                android:id="@+id/vehicleTankCapacityTv"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/vehicleColorTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Color"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/vehicleFuelTypeTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Fuel Type"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/vehicleCommentTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Comment"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/vehicleAddedOnTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Added On: "
+                android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:id="@+id/deleteVehicleDataBtn"
+        android:onClick="deleteVehicle"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:id="@+id/submitVehicleEditBtn"
+        android:onClick="redirectToEditVehicleData"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>

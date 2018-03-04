@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_about_us"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.alpha.ghosty.automobilemanager.AboutUs"
+    style="@style/layoutStyle">
+
+    <TextView
+        android:text="The App is Used to Manage Your AutoMobiles.\n The App is Developed By: Pramod Singh Rawat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/aboutTV" />
+</RelativeLayout>

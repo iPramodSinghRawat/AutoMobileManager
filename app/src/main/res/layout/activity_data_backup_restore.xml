@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.alpha.ghosty.automobilemanager.DataBackupRestore"
+    style="@style/layoutStyle">
+
+    <!--TextView
+        android:text="Data Backup and Restore"
+        android:id="@+id/pageTitle"
+        style="@style/pageTitle"/-->
+
+    <!--Button
+        style="@style/submitButton"
+        android:text="Import DataBase"
+        android:id="@+id/importDbBTN"
+        android:onClick="importDb"/>
+
+    <Button
+        style="@style/submitButton"
+        android:text="Export DataBase"
+        android:id="@+id/exportDbBTN"
+        android:layout_below="@+id/importDbBTN"
+        android:onClick="exportDb"/-->
+
+    <Button
+        style="@style/submitButton"
+        android:text="Complete Backup"
+        android:id="@+id/cmpleteBckUpBTN"
+        android:onClick="doCompleteBackUp"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff"
+        android:text=""
+        android:id="@+id/resultTv"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.alpha.ghosty.automobilemanager.OtherExpensesView"
+    style="@style/layoutStyle">
+
+    <!--TextView
+        android:text="Other Expenses"
+        android:id="@+id/pageTitle"
+        style="@style/pageTitle"/-->
+
+    <TextView
+        style="@style/selectVehicle"
+        android:text="Vehicle Detail: "
+        android:id="@+id/vehicleDetailTv"/>
+
+    <TextView
+        android:text="Select Type Of Expenses (Tap Here)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/typeOfExpenseTv"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/vehicleDetailTv"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/odoMtrRdingTv"
+        android:inputType="number"
+        android:text="Odo Meter Reading"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/typeOfExpenseTv"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dateTv"
+        android:inputType="date"
+        android:text="Date"
+        android:ems="10"
+        android:onClick="getDate"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/odoMtrRdingTv"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/priceTv"
+        android:inputType="numberDecimal"
+        android:text="Cost"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/dateTv"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload Receipt or Dashboard Pic for Future Reference"
+        android:id="@+id/receiptOptTv"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/priceTv" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/receiptView"
+        android:layout_below="@+id/receiptOptTv"
+        android:layout_above="@+id/addedOnTv"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AddedOn: "
+        android:id="@+id/addedOnTv"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

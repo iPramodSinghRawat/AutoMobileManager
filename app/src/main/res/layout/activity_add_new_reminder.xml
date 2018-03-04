@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.alpha.ghosty.automobilemanager.AddNewReminder"
+    style="@style/layoutStyle">
+
+    <!--TextView
+        android:text="Add New Reminder"
+        android:id="@+id/pageTitle"
+        style="@style/pageTitle"/-->
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:hint="Date"
+        android:ems="10"
+        android:id="@+id/dateET"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:hint="Time"
+        android:ems="10"
+        android:id="@+id/timeET"
+        android:layout_below="@+id/dateET" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Title"
+        android:ems="10"
+        android:id="@+id/titleET"
+        android:layout_below="@+id/timeET"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/detailET"
+        android:hint="Enter Details"
+        android:layout_below="@+id/titleET"/>
+
+    <Button
+        style="@style/submitButton"
+        android:text="Add"
+        android:id="@+id/addReminderBTN"
+        android:onClick="putReminder"
+        android:layout_below="@+id/detailET"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff"
+        android:text="Result"
+        android:id="@+id/resultTv"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

@@ -1,0 +1,161 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.alpha.ghosty.automobilemanager.TripRecordView"
+    style="@style/layoutStyle">
+
+    <!--TextView
+        android:text="Trip Record"
+        android:id="@+id/pageTitle"
+        style="@style/pageTitle"/-->
+
+    <TextView
+        style="@style/selectVehicle"
+        android:text="Vehicle Detail: "
+        android:id="@+id/vehicleDetailTv"/>
+
+    <TextView
+        android:text="Type Of Trip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/typeOfTripTv"
+        android:textSize="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/vehicleDetailTv"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/departureReturnLL"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/typeOfTripTv">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/departureReturnLLS1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:text="Departure Details"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/DepartureDtlTv"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/departureLocationTv"
+                android:text="Departure To Location"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/DepartureDtlTv"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/odoMeterDepartureTv"
+                android:text="odoMeter Reading"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/departureLocationTv"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dateOfDepartureTv"
+                android:text="Date Of Departure"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/odoMeterDepartureTv"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/timeOfDepartureTv"
+                android:text="Time Of Departure"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/dateOfDepartureTv"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/departureReturnLLS2"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:text="Return Details"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/returnDtlTv"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/returnLocationTv"
+                android:text="Return Location"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/returnDtlTv"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/odoMeterReturnTv"
+                android:text="odoMeter Reading"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/returnLocationTv"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dateOfReturnTv"
+                android:text="Date Of Return"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/odoMeterReturnTv"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/timeOfReturnTv"
+                android:text="Time Of Return"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/dateOfReturnTv"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/priceTv"
+        android:text="Cost of Trip"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/departureReturnLL"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Receipt"
+        android:id="@+id/receiptOptTv"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/priceTv" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/receiptView"
+        android:layout_below="@+id/receiptOptTv"
+        android:layout_above="@+id/addedOnTv" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff"
+        android:text="addedOnTv"
+        android:id="@+id/addedOnTv"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

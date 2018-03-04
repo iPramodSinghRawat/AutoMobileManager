@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.alpha.ghosty.automobilemanager.UserSetting"
+    style="@style/layoutStyle">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scroller"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:layout_below="@id/pageTitle">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="Select Profile Type"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/usrProfileTypeTV"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/usrProfileTypeRG">
+                <RadioButton
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rider"
+                    android:id="@+id/rider"
+                    android:checked="true" />
+                <RadioButton
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Driver"
+                    android:id="@+id/driver"
+                    android:checked="false" />
+                <RadioButton
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trucker"
+                    android:id="@+id/trucker"
+                    android:checked="false" />
+            </RadioGroup>
+
+            <EditText
+                style="@style/editText"
+                android:inputType="textPersonName"
+                android:hint="Enter Your Name"
+                android:id="@+id/usrNameET"/>
+
+            <EditText
+                style="@style/editText"
+                android:inputType="textEmailAddress"
+                android:hint="Enter Your e-Mail id"
+                android:ems="10"
+                android:id="@+id/usrEmailIdET"/>
+
+            <EditText
+                style="@style/editText"
+                android:inputType="numberPassword"
+                android:hint="Enter Password"
+                android:ems="10"
+                android:id="@+id/usrPasswordET"/>
+
+            <EditText
+                style="@style/editText"
+                android:inputType="phone"
+                android:hint="Enter Mobile Number"
+                android:ems="10"
+                android:id="@+id/usrMobileET"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selected Currency"
+                android:id="@+id/usrCurrencyTxtVw"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="INR"
+                android:id="@+id/crncyTxtVw"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selected Consumption Unit"
+                android:id="@+id/consumptionUnitTxtVw"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="KiloMeter"
+                android:id="@+id/cnsmptnUntTv"/>
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enable Password Protection"
+                android:id="@+id/ppCheckBox"
+                android:textStyle="bold"
+                android:background="#fff"/>
+
+            <Button
+                style="@style/submitButton"
+                android:text="Update"
+                android:id="@+id/submit_usr_detail"
+                android:onClick="updateUserDetail"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Result: "
+                android:id="@+id/result_textView"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

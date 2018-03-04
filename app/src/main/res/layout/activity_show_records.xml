@@ -1,0 +1,176 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.alpha.ghosty.automobilemanager.ShowRecords"
+    style="@style/layoutStyle">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pageTitleLL"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            style="@style/selectVehicle"
+            android:text="Select Your Vehicle (Tap Here)"
+            android:id="@+id/selectVehicle"
+            android:onClick="selectVehicle"
+            android:clickable="true"
+            android:freezesText="true"
+            android:layout_below="@id/pageTitle"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scroller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@id/pageTitleLL">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/pageSubLL">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fuelRecordLL">
+
+                <TextView
+                    android:text="Last Fuel Filling Record"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lastFillRecordTvTTL"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lastFillRecordTv"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="redirect2FuelFillView"
+                    android:clickable="true"
+                    android:freezesText="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ServiceRecordLL">
+
+                <TextView
+                    android:text="Last Service Record"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lastServiceRecordTvTTL"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:text="Last Service Record"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lastServiceRecordTv"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="redirect2ServiceView"
+                    android:clickable="true"
+                    android:freezesText="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/oExpenseLL">
+
+                <TextView
+                    android:text="Last Other Expense Record"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lastOExpenseRecordTvTTL"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lastOExpenseRecordTv"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="redirect2oExpenseView"
+                    android:clickable="true"
+                    android:freezesText="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tripRecordLL">
+
+                <TextView
+                    android:text="Last Trip Record"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lastTripRecordTvTTL"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:text="Last Trip Record"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lastTripRecordTv"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="redirect2TripView"
+                    android:clickable="true"
+                    android:freezesText="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/insuranceRecordLL">
+
+                <TextView
+                    android:text="Last Insurance Record"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lastInsuranceRecordTvTTL"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:text="Last Insurance Record"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lastInsuranceRecordTv"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="redirect2InsuranceView"
+                    android:clickable="true"
+                    android:freezesText="true"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
